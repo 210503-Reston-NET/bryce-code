@@ -14,7 +14,7 @@ namespace RRModels {
 
         public override string ToString()
         {
-            return $"\t Rating: {Rating} \n\t Description: {Description}";
+            return $"\tRating: {Rating} \n\tDescription: {Description}";
         }
     }
 }
