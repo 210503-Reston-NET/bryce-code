@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 /// <summary>
 /// Namespace for the models/custom data structures involved in Restaurant Reviews
 /// </summary>
@@ -41,7 +40,7 @@ namespace RRModels
         public List<Reviews> Reviews { get; set;}
         public override string ToString()
         {
-            return $"Name: {Name} \nLocation: {City}, {State}";
+            return $"Name: {Name} \nLocation: {City}, {State}\n";
         }
     }
 }

@@ -1,3 +1,6 @@
+using System;
+using RRModels;
+using System.Collections.Generic;
 namespace RRUI
 {
     public class MainMenu : IMenu
@@ -6,11 +9,11 @@ namespace RRUI
             bool repeat = true;
 
             do {
-            Console.Writeline("Welcome to my Restaurant Reviews Application!");
+            Console.WriteLine("Welcome to my Restaurant Reviews Application!");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("[0] View a restaurant");
-            Console.WriteLine("[1]");
-            string input = Console.Readline();
+            Console.WriteLine("[1] Exit");
+            string input = Console.ReadLine();
 
             switch (input)
             {
@@ -21,12 +24,12 @@ namespace RRUI
 
                 case "1":
                 // exit
-                    Console.WriteLine("Goodbye cruel world.");
+                    Console.WriteLine("\nGoodbye cruel world.");
                     repeat = false;
                     break;
                 default:
                 // invalid input
-                Console.WriteLine("Please iput a valid option");
+                Console.WriteLine("\nPlease iput a valid option");
                 break;
             }
             } while (repeat);
