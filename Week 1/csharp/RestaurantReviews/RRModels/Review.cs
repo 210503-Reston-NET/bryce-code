@@ -1,5 +1,5 @@
 namespace RRModels {
-    public class Review {
+    public class Reviews {
         /// <summary>
         /// This describes the overall numeric rating of a restaurant
         /// </summary>
