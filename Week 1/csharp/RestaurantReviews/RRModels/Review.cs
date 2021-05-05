@@ -1,11 +1,12 @@
-namespace RRModels {
-    public class Reviews {
+namespace RRModels
+{
+    public class Review
+    {
         /// <summary>
         /// This describes the overall numeric rating of a restaurant
         /// </summary>
         /// <value></value>
         public int Rating { get; set; }
-        
         /// <summary>
         /// Verbose description of the dining experience
         /// </summary>
@@ -14,7 +15,7 @@ namespace RRModels {
 
         public override string ToString()
         {
-            return $"\tRating: {Rating} \n\tDescription: {Description}\n";
+            return $"\t Rating: {Rating} \n\t Description: {Description}";
         }
     }
 }
