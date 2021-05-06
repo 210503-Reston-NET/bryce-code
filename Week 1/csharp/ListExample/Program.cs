@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ListExample
 {
@@ -32,7 +33,8 @@ namespace ListExample
             list.Add(owen);
             list.Add(meg);
 
-            list.Sort(new AgeComparer());
+            // Sorts list using Linq OrderBy feature
+            list = list.OrderBy(o=>o.Age).ToList();
 
             foreach (Person person in list) {
                 Console.WriteLine("Name: {0}\tAge: {1}", person.Name, person.Age);
@@ -40,8 +42,3 @@ namespace ListExample
         }
     }
 }
-            class AgeComparer : IComparer<(string, int, string)> {
-                public int Compare((string, int, string) p1, (string, int, string) p2) {
-                    return p1.Item1.Split()[1].CompareTo(p2.Item1.Split()[1]);
-                }
-            }
