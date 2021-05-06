@@ -19,8 +19,8 @@ namespace RRUI
                 switch (input)
                 {
                     case "0":
-                        // Fix this
-                        submenu = new RestaurantMenu(new RestaurantBL(new RepoSC()));
+                        // TODO: Fix this
+                        submenu = new RestaurantMenu(new RestaurantBL(new RepoSC()), new ValidationService());
                         submenu.Start();
                         break;
                     case "1":
