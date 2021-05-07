@@ -50,9 +50,8 @@ namespace RRUI
             string city = _validate.ValidateString("Enter the city where the restaurant is located");
             string state = _validate.ValidateString("Enter the state where the restaurant is located at");
 
-            Restaurant newRestaurant = new Restaurant(name, city, state);
-
             try {
+            Restaurant newRestaurant = new Restaurant(name, city, state);
             Restaurant createdRestaurant =  _restaurantBL.AddRestaurant(newRestaurant);
             Console.WriteLine("New Restaurant Created!");
             Console.WriteLine(createdRestaurant.ToString());
