@@ -12,7 +12,7 @@ namespace RRDL
     public class RepoFile : IRepository 
     {
         // The file path is relative to where you run the dotnet run command, Since it is run in the RRUI project the filepath is relative from RRUI to the file location
-        private const string filePath = "../RRDL/Restaurats.json";
+        private const string filePath = "../RRDL/Restaurants.json";
         private string jsonString;
 
     public Restaurant AddRestaurant(Restaurant restaurant) {
