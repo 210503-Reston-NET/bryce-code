@@ -1,0 +1,12 @@
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/bin/Debug/net5.0/RRModels.deps.json
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/bin/Debug/net5.0/RRModels.dll
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/bin/Debug/net5.0/ref/RRModels.dll
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/bin/Debug/net5.0/RRModels.pdb
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.csprojAssemblyReference.cache
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.AssemblyInfoInputs.cache
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.AssemblyInfo.cs
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.csproj.CoreCompileInputs.cache
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.dll
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/ref/RRModels.dll
+/Users/brycesmacbookair/Revature/bryce-code/Week 2/SQL/RestaurantReviews/RRModels/obj/Debug/net5.0/RRModels.pdb
