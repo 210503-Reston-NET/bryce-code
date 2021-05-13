@@ -22,8 +22,9 @@ namespace RRUI
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("[0] View restaurants");
                 Console.WriteLine("[1] Create a restaurant");
-                Console.WriteLine("[2] Search Restaurant");
-                Console.WriteLine("[3] Go back");
+                Console.WriteLine("[2] Search restaurant");
+                Console.WriteLine("[3] Delete a restaurant");
+                Console.WriteLine("[4] Go back");
                 string input = Console.ReadLine();
                 switch (input)
                 {
@@ -33,12 +34,13 @@ namespace RRUI
                     case "1":
                         AddARestaurant();
                         break;
-
                     case "2":
-                        SearchForRestaurant();
+                        MenuFactory.GetMenu("review").Start();
                         break;
-                    
                     case "3":
+                        DeleteARestaurant();
+                        break;
+                    case "4":
                         repeat = false;
                         break;
                     default:
@@ -48,18 +50,19 @@ namespace RRUI
             } while (repeat);
         }
 
-        private void SearchForRestaurant()
+        private void DeleteARestaurant()
         {
-            Console.WriteLine("Please enter restaurant details, do note this is a case sensistive application");
+            Console.WriteLine("Enter the restaurant details of the restaurant you want to delete");
             string name = _validate.ValidateString("Enter the restaurant name: ");
             string city = _validate.ValidateString("Enter the city where the restaurant is located");
             string state = _validate.ValidateString("Enter the state where the restaurant is located at");
-            try {
-                Restaurant foundRestaurant = _restaurantBL.GetRestaurant(new Restaurant(name, city, state));
-                Console.WriteLine("We found the restaurant!");
-                // Call the review menu
-                MenuFactory.GetMenu("review");
-            } catch (Exception ex) {
+
+            try
+            {
+                _restaurantBL.DeleteRestaurant(new Restaurant(name, city, state));
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.Message);
             }
         }

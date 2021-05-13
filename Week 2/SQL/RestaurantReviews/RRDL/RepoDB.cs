@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Model = RRModels;
 using Entity = RRDL.Entities;
 using System.Linq;
+using RRModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace RRDL
 {
@@ -31,11 +33,33 @@ namespace RRDL
             return restaurant;
         }
 
+        public Model.Review AddReview(Restaurant restaurant, Review review)
+        {
+            _context.Reviews.Add(
+                new Entity.Review
+                {
+                    Rating = review.Rating,
+                    Description = review.Description,
+                    RestaurantId = GetRestaurant(restaurant).Id
+                }
+            );
+            _context.SaveChanges();
+            return review;
+        }
+
+        public Restaurant DeleteRestaurant(Restaurant restaurant)
+        {
+            Entity.Restaurant toBeDeleted = _context.Restaurants.First(resto => resto.Id == restaurant.Id);
+            _context.Restaurants.Remove(toBeDeleted);
+            _context.SaveChanges();
+            return restaurant;
+        }
+
         public List<Model.Restaurant> GetAllRestaurants()
         {
             return _context.Restaurants
             .Select(
-                restaurant => new Model.Restaurant(restaurant.Name, restaurant.City, restaurant.State)
+                restaurant => new Model.Restaurant(restaurant.Id, restaurant.Name, restaurant.City, restaurant.State)
             ).ToList();
         }
 
@@ -45,7 +69,30 @@ namespace RRDL
             Entity.Restaurant found = _context.Restaurants.FirstOrDefault(resto => resto.Name == restaurant.Name && resto.City == restaurant.City && resto.State == restaurant.State);
             // we get the results and return null if nothing is found, otherwise return a Model.Restaurant that was found
             if (found == null) return null;
-            return new Model.Restaurant(found.Name, found.City, found.State);
+            return new Model.Restaurant(found.Id, found.Name, found.City, found.State);
+        }
+
+        public List<Review> GetReviews(Restaurant restaurant)
+        {
+            // We get the reviews such that, we find the restuarant that matches the restaurant being passed, 
+            // we get the id of that specific restaurant, compare it to the FK references in the Reviews table
+            // get the reviews that match the condition
+            //  transform the entity type reviews to a model type review
+            // Immediately execute the linq query by calling tolist, which takes the data from the db and puts it in 
+            // a list
+
+            //Finding the restaurant from the db, to be able to take advantage of the Id property the model doesn't have (well now it does)
+            //Entity.Restaurant foundResto = _context.Restaurants.FirstOrDefault(resto => resto.Name == restaurant.Name && resto.City == restaurant.City && resto.State == restaurant.State);
+
+            return _context.Reviews.Where(
+                review => review.RestaurantId == GetRestaurant(restaurant).Id
+                ).Select(
+                    review => new Model.Review
+                    {
+                        Rating = review.Rating,
+                        Description = review.Description
+                    }
+                ).ToList();
         }
     }
 }
