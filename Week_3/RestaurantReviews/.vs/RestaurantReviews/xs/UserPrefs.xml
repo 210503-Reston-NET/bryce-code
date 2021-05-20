@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{A20BD7AB-257F-4239-B8DC-9C74B5E6867F}|Default">
+  <MonoDevelop.Ide.ItemProperties.RRWebUI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RRWebUI/Views/Restaurant/Index.cshtml">
+    <Files>
+      <File FileName="RRWebUI/Controllers/RestaurantController.cs" Line="99" Column="66" />
+      <File FileName="RRWebUI/Models/RestaurantVM.cs" Line="19" Column="1" />
+      <File FileName="RRWebUI/Views/Restaurant/Edit.cshtml" Line="31" Column="46" />
+      <File FileName="RRWebUI/Views/Restaurant/Index.cshtml" Line="45" Column="59" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RestaurantReviews" expanded="True">
+            <Node name="RRBL" expanded="True" />
+            <Node name="RRDL" expanded="True" />
+            <Node name="RRModels" expanded="True" />
+            <Node name="RRWebUI" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Restaurant" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
