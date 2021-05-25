@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRBL/RRBL.csproj": {}
+    "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRBL/RRBL.csproj": {}
   },
   "projects": {
-    "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRBL/RRBL.csproj": {
+    "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRBL/RRBL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRBL/RRBL.csproj",
+        "projectUniqueName": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRBL/RRBL.csproj",
         "projectName": "RRBL",
-        "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRBL/RRBL.csproj",
+        "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRBL/RRBL.csproj",
         "packagesPath": "/Users/brycesmacbookair/.nuget/packages/",
-        "outputPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRBL/obj/",
+        "outputPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRBL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/brycesmacbookair/.config/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj": {
-                "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj"
+              "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj": {
+                "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj"
               },
-              "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj": {
-                "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj"
+              "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj": {
+                "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj": {
+    "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj",
+        "projectUniqueName": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj",
         "projectName": "RRDL",
-        "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj",
+        "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj",
         "packagesPath": "/Users/brycesmacbookair/.nuget/packages/",
-        "outputPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/obj/",
+        "outputPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/brycesmacbookair/.config/NuGet/NuGet.Config"
@@ -85,8 +85,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj": {
-                "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj"
+              "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj": {
+                "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj": {
+    "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj",
+        "projectUniqueName": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj",
         "projectName": "RRModels",
-        "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj",
+        "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj",
         "packagesPath": "/Users/brycesmacbookair/.nuget/packages/",
-        "outputPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/obj/",
+        "outputPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/brycesmacbookair/.config/NuGet/NuGet.Config"

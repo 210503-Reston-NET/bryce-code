@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iFSC1TREFmdm/6k/2+AHfEDFyp+kRH4vLtUoPUK7WYlK+qjrsES1TDsXqQK4cA9S6Qh1HnDKwrpz5M4vy0TB/Q==",
+  "dgSpecHash": "YJdJ/aGAKpmOYzJygi5IuqqUsQ2+pZMjeWP9aqEf6g+5i6V6o8bNXA95efETGJMS2KhpT+HMLth1DB7I4VTcgw==",
   "success": true,
-  "projectFilePath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRDL/RRDL.csproj",
+  "projectFilePath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRDL/RRDL.csproj",
   "expectedPackageFiles": [
     "/Users/brycesmacbookair/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/brycesmacbookair/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

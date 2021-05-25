@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj",
+      "projectUniqueName": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj",
       "projectName": "RRModels",
-      "projectPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/RRModels.csproj",
+      "projectPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/RRModels.csproj",
       "packagesPath": "/Users/brycesmacbookair/.nuget/packages/",
-      "outputPath": "/Users/brycesmacbookair/Desktop/RestaurantReviews/RRModels/obj/",
+      "outputPath": "/Users/brycesmacbookair/Revature/bryce-code/Week_3/RestaurantReviews/RRModels/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/brycesmacbookair/.config/NuGet/NuGet.Config"
