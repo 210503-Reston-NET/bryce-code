@@ -1,17 +1,18 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using RRModels;
+
 namespace RRDL
 {
     public interface IRepository
     {
-        List<Restaurant> GetAllRestaurants();
-        Restaurant AddRestaurant(Restaurant restaurant);
-        Restaurant GetRestaurant(Restaurant restaurant);
-        Restaurant GetRestaurantById(int id);
-
-        Restaurant DeleteRestaurant(Restaurant restaurant);
-        Review AddReview(Restaurant restaurant, Review review);
-        List<Review> GetReviews(Restaurant restaurant);
-        Restaurant EditRestaurant(Restaurant restaurant);
+        Task<List<Restaurant>> GetAllRestaurantsAsync();
+        Task<Restaurant> AddRestaurantAsync(Restaurant restaurant);
+        Task<Restaurant> GetRestaurantAsync(Restaurant restaurant);
+        Task<Restaurant> GetRestaurantByIdAsync(int id);
+        Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant);
+        Task<Restaurant> DeleteRestaurantAsync(Restaurant restaurant);
+        Task<Review> AddReviewAsync(Restaurant restaurant, Review review);
+        Task<List<Review>> GetReviewsAsync(Restaurant restaurant);
     }
 }

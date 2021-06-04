@@ -34,7 +34,7 @@ namespace RRTests
                 IRepository _repo = new RepoDB(context);
 
                 //Act
-                var restaurants = _repo.GetAllRestaurants();
+                var restaurants = _repo.GetAllRestaurantsAsync();
 
                 //Assert
                 Assert.Equal(2, restaurants.Count);
@@ -52,7 +52,7 @@ namespace RRTests
             {
                 IRepository _repo = new RepoDB(context);
                 //Act with a test context
-                _repo.AddRestaurant
+                _repo.AddRestaurantAsync
                 (
                     new Restaurant("Whataburger", "Dallas", "TX")
                 );

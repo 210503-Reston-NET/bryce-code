@@ -15,7 +15,7 @@ namespace RRTests
         public void GetReviewsShouldReturnAverage()
         {
             var mockRepo = new Mock<IRepository>();
-            mockRepo.Setup(x => x.GetReviews(It.IsAny<Restaurant>())).Returns
+            mockRepo.Setup(x => x.GetReviewsAsync(It.IsAny<Restaurant>())).Returns
                 (
                 new List<Review>()
                 {
@@ -25,7 +25,7 @@ namespace RRTests
                 );
             var reviewBL = new ReviewBL(mockRepo.Object);
 
-            var result = reviewBL.GetReviews(new Restaurant());
+            var result = reviewBL.GetReviewsAsync(new Restaurant());
 
             Assert.Equal(5, result.Item2);
         }

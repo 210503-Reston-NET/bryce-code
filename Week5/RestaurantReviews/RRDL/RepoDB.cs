@@ -3,6 +3,7 @@ using Model = RRModels;
 using System.Linq;
 using RRModels;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace RRDL
 {
@@ -13,77 +14,65 @@ namespace RRDL
         {
             _context = context;
         }
-        public Model.Restaurant AddRestaurant(Model.Restaurant restaurant)
+        public async Task<Restaurant> AddRestaurantAsync(Model.Restaurant restaurant)
         {
             //This records a change in the context change tracker that we want to add this particular entity to the 
             // db
-            _context.Restaurants.Add(
+            await _context.Restaurants.AddAsync(
                 restaurant
             );
             //This persists the change to the db
             // Note: you can create a separate method that persists the changes so that you can execute repo commands in
             //the BL and save changes only when all the operations return no exceptions
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return restaurant;
         }
 
-        public Model.Review AddReview(Restaurant restaurant, Review review)
+        public async Task<Review> AddReviewAsync(Restaurant restaurant, Review review)
         {
-            _context.Reviews.Add(
+            await _context.Reviews.AddAsync(
                 new Review
                 {
                     Rating = review.Rating,
                     Description = review.Description,
-                    RestaurantId = GetRestaurant(restaurant).Id
+                    RestaurantId = GetRestaurantAsync(restaurant).Id
                 }
             );
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return review;
         }
 
-        public Restaurant DeleteRestaurant(Restaurant restaurant)
+        public async Task<Restaurant> DeleteRestaurantAsync(Restaurant restaurant)
         {
-            Restaurant toBeDeleted = _context.Restaurants.First(resto => resto.Id == restaurant.Id);
+            Restaurant toBeDeleted = _context.Restaurants.AsNoTracking().First(resto => resto.Id == restaurant.Id);
             _context.Restaurants.Remove(toBeDeleted);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return restaurant;
         }
 
-        public Restaurant EditRestaurant(Restaurant restaurant)
+        public async Task<List<Restaurant>> GetAllRestaurantsAsync()
         {
-            Restaurant found = _context.Restaurants.Single(resto => resto.Id == restaurant.Id);
-            if (found == null) return null;
-            found.Name = restaurant.Name;
-            found.City = restaurant.City;
-            found.State = restaurant.State;
-            _context.SaveChanges();
-            return found;
-
-        }
-
-        public List<Model.Restaurant> GetAllRestaurants()
-        {
-            return _context.Restaurants
+            return await _context.Restaurants.AsNoTracking()
             .Select(
                 restaurant => restaurant
-            ).ToList();
+            ).ToListAsync();
         }
 
-        public Model.Restaurant GetRestaurant(Model.Restaurant restaurant)
+        public async Task<Restaurant> GetRestaurantAsync(Model.Restaurant restaurant)
         {
             //find me a restaurant from the db that is equal to the input restaurant
-            Restaurant found = _context.Restaurants.FirstOrDefault(resto => resto.Name == restaurant.Name && resto.City == restaurant.City && resto.State == restaurant.State);
+            Restaurant found = await _context.Restaurants.AsNoTracking().FirstOrDefaultAsync(resto => resto.Name == restaurant.Name && resto.City == restaurant.City && resto.State == restaurant.State);
             // we get the results and return null if nothing is found, otherwise return a Model.Restaurant that was found
             if (found == null) return null;
             return new Model.Restaurant(found.Id, found.Name, found.City, found.State);
         }
 
-        public Restaurant GetRestaurantById(int id)
+        public async Task<Restaurant> GetRestaurantByIdAsync(int id)
         {
-            return _context.Restaurants.Find(id);
+            return await _context.Restaurants.FindAsync(id);
         }
 
-        public List<Review> GetReviews(Restaurant restaurant)
+        public async Task<List<Review>> GetReviewsAsync(Restaurant restaurant)
         {
             // We get the reviews such that, we find the restuarant that matches the restaurant being passed, 
             // we get the id of that specific restaurant, compare it to the FK references in the Reviews table
@@ -95,11 +84,18 @@ namespace RRDL
             //Finding the restaurant from the db, to be able to take advantage of the Id property the model doesn't have (well now it does)
             //Entity.Restaurant foundResto = _context.Restaurants.FirstOrDefault(resto => resto.Name == restaurant.Name && resto.City == restaurant.City && resto.State == restaurant.State);
 
-            return _context.Reviews.Where(
-                review => review.RestaurantId == GetRestaurant(restaurant).Id
+            return await _context.Reviews.AsNoTracking().Where(
+                review => review.RestaurantId == restaurant.Id
                 ).Select(
                     review => review
-                ).ToList();
+                ).ToListAsync();
+        }
+
+        public async Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant)
+        {
+            _context.Restaurants.Update(restaurant);
+            await _context.SaveChangesAsync();
+            return restaurant;
         }
     }
 }
